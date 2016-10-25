@@ -689,7 +689,7 @@ module Stupidedi
                   b::Element(e::Situational, "Name Middle"),
                   b::Element(e::NotUsed,     "Name Prefix"),
                   b::Element(e::Situational, "Name Suffix"),
-                  b::Element(e::Situational, "Identification Code Qualifier"),
+                  b::Element(e::Situational, "Identification Code Qualifier", b::Values("XX", "24")),
                   b::Element(e::Situational, "Laboratory or Facility Primary Identifier"),
                   b::Element(e::NotUsed,     "Entity Relationship Code"),
                   b::Element(e::NotUsed,     "Entity Identifier Code"),
