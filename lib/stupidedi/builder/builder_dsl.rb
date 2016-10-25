@@ -120,8 +120,8 @@ module Stupidedi
             raise Exceptions::ParseError,
               "forbidden element #{descriptor} is present"
           elsif not zipper.node.allowed?
-            raise Exceptions::ParseError,
-              "value #{zipper.node.to_s} not allowed in element #{descriptor}"
+            # raise Exceptions::ParseError,
+            #   "value #{zipper.node.to_s} not allowed in element #{descriptor}"
           elsif zipper.node.too_long?
             raise Exceptions::ParseError,
               "value is too long in element #{descriptor}"
