@@ -676,6 +676,8 @@ module Stupidedi
                   b::Element(e::NotUsed,     "Description"),
                   b::Element(e::NotUsed,     "REFERENCE IDENTIFIER"))),
 
+              # CUSTOM change to allowed values for 2310C NM108 to accomodate MORC override
+              # ORIGINAL b::Element(e::Situational, "Identification Code Qualifier", b::Values("XX")),
               d::LoopDef.build("2310C SERVICE FACILITY LOCATION NAME",
                 d::RepeatCount.bounded(1),
                 b::Segment(2500, s::NM1, "Service Facility Location Name",
@@ -687,7 +689,7 @@ module Stupidedi
                   b::Element(e::Situational, "Name Middle"),
                   b::Element(e::NotUsed,     "Name Prefix"),
                   b::Element(e::Situational, "Name Suffix"),
-                  b::Element(e::Situational, "Identification Code Qualifier", b::Values("XX")),
+                  b::Element(e::Situational, "Identification Code Qualifier"),
                   b::Element(e::Situational, "Laboratory or Facility Primary Identifier"),
                   b::Element(e::NotUsed,     "Entity Relationship Code"),
                   b::Element(e::NotUsed,     "Entity Identifier Code"),
